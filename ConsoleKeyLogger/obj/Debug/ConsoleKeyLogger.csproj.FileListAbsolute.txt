@@ -1,0 +1,6 @@
+c:\users\usteam\documents\visual studio 2012\Projects\ConsoleKeyLogger\ConsoleKeyLogger\bin\Debug\ConsoleKeyLogger.exe.config
+c:\users\usteam\documents\visual studio 2012\Projects\ConsoleKeyLogger\ConsoleKeyLogger\obj\Debug\ConsoleKeyLogger.csprojResolveAssemblyReference.cache
+c:\users\usteam\documents\visual studio 2012\Projects\ConsoleKeyLogger\ConsoleKeyLogger\bin\Debug\ConsoleKeyLogger.exe
+c:\users\usteam\documents\visual studio 2012\Projects\ConsoleKeyLogger\ConsoleKeyLogger\bin\Debug\ConsoleKeyLogger.pdb
+c:\users\usteam\documents\visual studio 2012\Projects\ConsoleKeyLogger\ConsoleKeyLogger\obj\Debug\ConsoleKeyLogger.exe
+c:\users\usteam\documents\visual studio 2012\Projects\ConsoleKeyLogger\ConsoleKeyLogger\obj\Debug\ConsoleKeyLogger.pdb
